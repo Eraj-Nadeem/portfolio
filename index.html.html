@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syeda Eraj Nadeem | Remote Project Manager & SEO Strategist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5em;
+            color: #E63946;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #333333;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background: #E63946;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #D62828;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5em;
+            color: #E63946;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            color: #333333;
+            font-size: 0.95em;
+        }
+
+        /* About Section */
+        .about {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            color: #1A1A1A;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .about > p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            border: 2px solid #f0f0f0;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-color: #E63946;
+        }
+
+        .skill-category h3 {
+            color: #E63946;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #333333;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .skill-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #E63946;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .experience h2 {
+            font-size: 2.5em;
+            color: #1A1A1A;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .job {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .job:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .job h3 {
+            color: #1A1A1A;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .job h4 {
+            color: #E63946;
+            font-size: 1.2em;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .job-date {
+            color: #666666;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .job ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .job li {
+            margin-bottom: 12px;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #E63946 0%, #FF6B7A 50%, #FFB4A2 100%);
+            border-radius: 24px;
+            padding: 80px 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.15);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact h2 {
+            font-size: 3em;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-tagline {
+            font-size: 1.3em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 50px;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            min-width: 65px;
+            min-height: 65px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            text-decoration: none;
+            color: #E63946;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            font-weight: 600;
+            font-size: 1.05em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.08);
+            transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact-link:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .contact-link:hover {
+            background: #FFFFFF;
+            transform: translateY(-4px) rotate(10deg);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-icon {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: currentColor;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-link:hover .contact-icon {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .contact-link span {
+            position: relative;
+            z-index: 1;
+            display: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Syeda Eraj Nadeem</h1>
+                <h2>Remote Project Manager & Content Strategist</h2>
+                <p>7+ years of experience helping international brands scale through efficient workflows, organic growth strategies, and data-driven decision-making. Based in Pakistan, collaborating with clients worldwide.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-item">
+                <h3>35+</h3>
+                <p>Global Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>On-Time Delivery</p>
+            </div>
+            <div class="stat-item">
+                <h3>7+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="about">
+            <h2>What I Bring to the Table</h2>
+            <p>With over 7 years of experience, I specialize in bridging the gap between business objectives and technical execution. I bring a unique blend of project management expertise, SEO knowledge, and financial acumen to help organizations achieve their goals efficiently and effectively.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Project Management</h3>
+                    <ul>
+                        <li>Agile & Scrum Methodologies</li>
+                        <li>Remote Team Leadership</li>
+                        <li>Sprint Planning & Execution</li>
+                        <li>Risk Management</li>
+                        <li>Stakeholder Communication</li>
+                        <li>Budget Management</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>SEO & Content</h3>
+                    <ul>
+                        <li>SEO Strategy & Implementation</li>
+                        <li>Google Analytics & Search Console</li>
+                        <li>WordPress & Elementor</li>
+                        <li>Content Marketing Strategy</li>
+                        <li>Keyword Research & Analysis</li>
+                        <li>Technical SEO</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Tech</h3>
+                    <ul>
+                        <li>ClickUp, Jira, Asana</li>
+                        <li>Slack, Zoom, Microsoft Teams</li>
+                        <li>Google Workspace</li>
+                        <li>SEMrush, Ahrefs</li>
+                        <li>Microsoft Project</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="experience">
+            <h2>Professional Journey</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Carpe Diem Team</h3>
+                        <h4>Project Manager (Remote)</h4>
+                    </div>
+                    <span class="job-date">Nov 2024 - Present</span>
+                </div>
+                <ul>
+                    <li>Successfully managing 50+ complex IT projects for international clients across multiple time zones</li>
+                    <li>Leading distributed cross-functional teams using modern collaboration tools (ClickUp, Slack, Worktivity)</li>
+                    <li>Achieved 40% reduction in project turnaround time through optimized workflows and agile methodologies</li>
+                    <li>Maintained 100% on-time delivery rate while managing tight deadlines and competing priorities</li>
+                    <li>Increased team productivity by 30% through enhanced task visibility and accountability measures</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Carpe Diem Team</h3>
+                        <h4>SEO Content Writer (Remote)</h4>
+                    </div>
+                    <span class="job-date">Nov 2024 - May 2025</span>
+                </div>
+                <ul>
+                    <li>Increased organic website traffic by 60% within six months through strategic SEO optimization</li>
+                    <li>Boosted lead generation by 30% through targeted content strategies and keyword optimization</li>
+                    <li>Collaborated with marketing, design, and product teams to ensure brand consistency across channels</li>
+                    <li>Improved user engagement metrics by 30% through data-driven content improvements</li>
+                    <li>Created high-performing landing pages and blog content using WordPress and Elementor</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Dubai Islamic Bank Pakistan Limited</h3>
+                        <h4>Graduate Trainee Officer</h4>
+                    </div>
+                    <span class="job-date">Dec 2023 - Apr 2024</span>
+                </div>
+                <ul>
+                    <li>Optimized branch workflows and customer service processes, reducing transaction time by 20%</li>
+                    <li>Decreased cash discrepancy incidents by 30% through rigorous management procedures</li>
+                    <li>Improved credit risk assessments by 12% through comprehensive financial analysis</li>
+                    <li>Enhanced customer satisfaction scores by 15% through improved service delivery</li>
+                    <li>Conducted detailed analysis of remittances and cash flows supporting strategic decisions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact" id="contact">
+            <div class="contact-content">
+                <h2>Let's Work Together</h2>
+                <p class="contact-tagline">Available for remote opportunities worldwide. Ready to bring strategic thinking and execution excellence to your team.</p>
+                <div class="contact-links">
+                    <a href="mailto:syedaerajn@gmail.com" class="contact-link" aria-label="Send Email">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m2 7 10 7 10-7"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+923193373350" class="contact-link" aria-label="Call">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/eraj-nadeem/" target="_blank" class="contact-link" aria-label="Visit LinkedIn Profile">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
